@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+    line-height: 1.6;
+}
+
+.resume {
+    width: 800px;
+    max-width: 95%;
+    margin: 30px auto;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+
+header {
+    border-bottom: 2px solid #222;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+}
+
+.profile-picture span {
+    font-size: 14px;
+}
+
+.header-info h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.header-info h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+
+section {
+    margin-bottom: 25px;
+}
+
+section h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+}
+
+section p {
+    font-size: 15px;
+}
+
+/* Items */
+
+.item {
+    margin-bottom: 15px;
+}
+
+.item h4 {
+    font-size: 17px;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Skills */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    border: 1px solid #222;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+/* Lists */
+
+ul {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+li {
+    font-size: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .resume {
+        padding: 25px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-info h1 {
+        font-size: 28px;
+    }
+
+}
