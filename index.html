@@ -1,119 +1,173 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Resume Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="resume">
+<div class="container">
 
-        <!-- Header -->
-        <header>
-            <div class="profile">
-                <div class="profile-picture">
-                    <span>PHOTO</span>
-                </div>
+    <!-- FORM -->
+    <div id="formPage">
 
-                <div class="header-info">
-                    <h1>Orfano, Ralph Justine F.</h1>
-                    <h2>Web Developer / Student</h2>
-                    <p>
-                        📧 ralphorfano807@email.com |
-                        📱 0951-077-3103 |
-                        📍 Valenzuela City, Philippines
-                    </p>
-                </div>
+        <h1>RESUME FORM</h1>
+
+        <form id="resumeForm">
+
+            <div class="section">
+                <h2>Personal Information</h2>
+
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+
+                <label>Email</label>
+                <input type="email" id="email" required>
+
+                <label>Phone Number</label>
+                <input type="text" id="phone" required>
+
+                <label>Address</label>
+                <input type="text" id="address" required>
+
+                <label>Date of Birth</label>
+                <input type="date" id="birthday">
+
+                <label>Profile Picture</label>
+                <input type="file" id="photo" accept="image/*">
             </div>
-        </header>
 
-        <!-- About Me -->
-        <section>
-            <h3>ABOUT ME</h3>
+            <div class="section">
+                <h2>Career Objective</h2>
+
+                <textarea id="objective"
+                    placeholder="Write your career objective"></textarea>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+
+                <label>School / University</label>
+                <input type="text" id="school">
+
+                <label>Course / Degree</label>
+                <input type="text" id="course">
+
+                <label>Year Graduated</label>
+                <input type="text" id="year">
+            </div>
+
+            <div class="section">
+                <h2>Work Experience</h2>
+
+                <label>Company Name</label>
+                <input type="text" id="company">
+
+                <label>Position</label>
+                <input type="text" id="position">
+
+                <label>Years of Experience</label>
+                <input type="text" id="experience">
+
+                <label>Job Description</label>
+                <textarea id="jobDescription"></textarea>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+
+                <textarea id="skills"
+                    placeholder="Example: HTML, CSS, Communication"></textarea>
+            </div>
+
+            <div class="section">
+                <h2>References</h2>
+
+                <label>Reference Name</label>
+                <input type="text" id="reference">
+
+                <label>Position</label>
+                <input type="text" id="referencePosition">
+
+                <label>Contact Number</label>
+                <input type="text" id="referenceContact">
+            </div>
+
+            <button type="submit">DISPLAY RESUME</button>
+            <button type="reset" class="reset">CLEAR</button>
+
+        </form>
+    </div>
+
+
+    <!-- RESULT -->
+    <div id="resumePage" class="resume" style="display: none;">
+
+        <div class="resume-header">
+
+            <img id="resultPhoto" src="" alt="Profile Picture">
+
+            <div>
+                <h1 id="resultName"></h1>
+                <p id="resultEmail"></p>
+                <p id="resultPhone"></p>
+                <p id="resultAddress"></p>
+            </div>
+
+        </div>
+
+        <div class="resume-section">
+            <h2>CAREER OBJECTIVE</h2>
+            <p id="resultObjective"></p>
+        </div>
+
+        <div class="resume-section">
+            <h2>EDUCATION</h2>
             <p>
-                I am a motivated and hardworking student interested in
-                web development and technology. I enjoy learning new skills,
-                creating websites, and working on projects.
+                <strong id="resultSchool"></strong><br>
+                <span id="resultCourse"></span><br>
+                <span id="resultYear"></span>
             </p>
-        </section>
+        </div>
 
-        <!-- Education -->
-        <section>
-            <h3>EDUCATION</h3>
+        <div class="resume-section">
+            <h2>WORK EXPERIENCE</h2>
+            <p>
+                <strong id="resultCompany"></strong><br>
+                <span id="resultPosition"></span><br>
+                <span id="resultExperience"></span>
+            </p>
 
-            <div class="item">
-                <h4>Bachelor of Science in Information Technology</h4>
-                <p class="date">2026 - Present</p>
-                <p>Bestlink College Of The Philippines</p>
-            </div>
+            <p id="resultJobDescription"></p>
+        </div>
 
-            <div class="item">
-                <h4>Senior High School</h4>
-                <p class="date">2021 - 2023</p>
-                <p>Lawang Bato Senior High School</p>
-            </div>
-        </section>
+        <div class="resume-section">
+            <h2>SKILLS</h2>
+            <p id="resultSkills"></p>
+        </div>
 
-        <!-- Skills -->
-        <section>
-            <h3>SKILLS</h3>
+        <div class="resume-section">
+            <h2>REFERENCES</h2>
+            <p>
+                <strong id="resultReference"></strong><br>
+                <span id="resultReferencePosition"></span><br>
+                <span id="resultReferenceContact"></span>
+            </p>
+        </div>
 
-            <div class="skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Teamwork</span>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section>
-            <h3>EXPERIENCE</h3>
-
-            <div class="item">
-                <h4>Student / Web Developer</h4>
-                <p class="date">2026 - Present</p>
-                <ul>
-                    <li>Created simple websites using HTML and CSS.</li>
-                    <li>Designed basic user interfaces.</li>
-                    <li>Worked on school programming projects.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section>
-            <h3>PROJECTS</h3>
-
-            <div class="item">
-                <h4>Inventory Management System</h4>
-                <p>
-                    Created a simple system for managing products,
-                    inventory, and stock information.
-                </p>
-            </div>
-
-            <div class="item">
-                <h4>Personal Portfolio Website</h4>
-                <p>
-                    Designed a personal website using HTML and CSS
-                    to showcase my skills and projects.
-                </p>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section>
-            <h3>CONTACT</h3>
-            <p>Email: ralphorfano807@email.com</p>
-            <p>Phone: 0951-077-3103</p>
-            <p>Location: Valenzuela City, Philippines</p>
-        </section>
+        <button onclick="backToForm()">EDIT RESUME</button>
+        <button onclick="window.print()">PRINT RESUME</button>
 
     </div>
 
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+```
